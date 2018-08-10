@@ -21,7 +21,7 @@ labelgenome(chrom, chromstart = NULL, chromend = NULL, genome = NULL,
 
 \item{space}{the space in between each chromosome as a fraction of the width of the plot.  Only for multi chromosomal plots}
 
-\item{scale}{Scale of the plot ('bp','Kb','Mb')}
+\item{scale}{Scale of the plot ('bp','Kbp','Mbp')}
 
 \item{side}{Side of the scale to add the plot to.  Only tested for sides 1 and 3.}
 
@@ -59,7 +59,7 @@ data(Sushi_DNaseI.bedgraph)
 # set the genomic regions
 
 plotBedgraph(Sushi_DNaseI.bedgraph,chrom="chr11",chromstart=1650000,chromend=2350000,colorbycol=SushiColors(7))
-labelgenome(chrom="chr11",chromstart=1650000,chromend=2350000,side=1,n=4,scale="Mb")
+labelgenome(chrom="chr11",chromstart=1650000,chromend=2350000,side=1,n=4,scale="Mbp")
 axis(side=2,las=2,tcl=.2)
 mtext("Read Depth",side=2,line=1.75,cex=.75,font=2)
 
