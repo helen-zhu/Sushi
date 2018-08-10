@@ -5,7 +5,7 @@
 #' @param chromend end position
 #' @param genome a genome object (2 columns: column 1 = chromosome name, column 2 = length of chromosome). Only for multi chromosomal plots
 #' @param space  the space in between each chromosome as a fraction of the width of the plot.  Only for multi chromosomal plots
-#' @param scale Scale of the plot ('bp','Kb','Mb') 
+#' @param scale Scale of the plot ('bp','Kbp','Mbp') 
 #' @param side Side of the scale to add the plot to.  Only tested for sides 1 and 3.
 #' @param scipen higher values decrease the likelihood of using scientific for the position labels.
 #' @param n Desired number of ticks 
@@ -66,13 +66,13 @@ function(chrom, chromstart=NULL,chromend=NULL,genome=NULL,space=0.01,scale="bp",
       fact = 1
     }
     
-    if(scale == "Mb")
+    if(scale == "Mbp")
     {
       chromstartlabel = chromstart /1000000
       chromendlabel   = chromend   /1000000
       fact = 1000000
     }
-    if(scale == "Kb")
+    if(scale == "Kbp")
     {
       chromstartlabel = chromstart /1000
       chromendlabel   = chromend   /1000
